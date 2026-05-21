@@ -1,0 +1,133 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  animation: fadeUp 0.35s ease both;
+  transition: border-color 0.15s;
+}
+
+.card:hover { border-color: var(--border-bright); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.rank {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.year { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+
+.gem {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--gem-dim);
+  color: var(--gem);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 99px;
+  padding: 0.15rem 0.6rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dot { opacity: 0.4; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 99px;
+  padding: 0.2rem 0.6rem;
+}
+
+.toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  margin-top: 0.15rem;
+}
+
+.toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+.body {
+  padding: 0 1.25rem 1.25rem;
+  padding-left: calc(1.25rem + 2rem + 1rem);
+  animation: expandIn 0.2s ease;
+}
+
+@keyframes expandIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.why {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--surface-2);
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.whyLabel { font-style: italic; color: var(--accent); font-weight: 600; }
+
+@media (max-width: 600px) {
+  .body { padding-left: 1.25rem; }
+}

@@ -1,0 +1,19 @@
+# env files — never commit API keys
+backend/.env
+frontend/.env
+
+# dependencies
+node_modules/
+*/node_modules/
+
+# build output
+dist/
+*/dist/
+
+# logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
